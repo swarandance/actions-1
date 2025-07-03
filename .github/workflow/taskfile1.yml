@@ -12,7 +12,7 @@ jobs:
     -name: welcome massage
       run: echo "my frist Github actions job"
 
-    -name: list files
+    -name: list file
       run: ls
       
     -name: read file
