@@ -1,22 +1,19 @@
 name: sample workflow
 
-on: 
-
-push:
-   
-  branches: [main]
-  workflow_dispatch:
-
+on: push
 
 jobs:
-  test_job:
-    run-on: ubuntu-latest
-  steps:
-      - name: Welcome msg
-        run: echo "this is Github Actions testing"
+    first_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout Repo
+      uses: actions/checkout@v4
 
-      - name: list files
-        run: ls
+    -name: welcome massage
+      run: echo "my frist Github actions job"
 
-        -name: read files
-         run: cat README.md
+    -name: list files
+      run: ls
+      
+    -name: read file
+      run: cat README.md
